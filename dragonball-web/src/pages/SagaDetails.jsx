@@ -122,8 +122,9 @@ function SagaDetails() {
           <section className="saga-detail">
             <div className="saga-detail-image-wrapper">
               <img
-                src={saga.image}
-                alt={saga.name}
+  src={`${API_URL}${saga.image}`}
+  alt={saga.name}
+
                 className="saga-detail-image"
               />
             </div>

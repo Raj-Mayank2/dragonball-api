@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+const API_URL = import.meta.env.VITE_API_URL;
 function CharacterCard({ character }) {
   return (
     <Link
@@ -9,8 +9,9 @@ function CharacterCard({ character }) {
       <article className="character-card">
         <div className="character-image-wrapper">
           <img
-            src={character.image}
-            alt={character.name}
+  src={`${API_URL}${character.image}`}
+  alt={character.name}
+
             className="character-image"
           />
         </div>

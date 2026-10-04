@@ -105,8 +105,9 @@ function CharacterDetails() {
           <section className="character-detail">
             <div className="detail-image-wrapper">
               <img
-                src={character.image}
-                alt={character.name}
+  src={`${API_URL}${character.image}`}
+  alt={character.name}
+
                 className="detail-image"
               />
             </div>

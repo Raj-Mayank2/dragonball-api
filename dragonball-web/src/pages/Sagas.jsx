@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import JsonViewer from "../components/JsonViewer";
 
-const API_URL = "http://127.0.0.1:8000";
-
+const API_URL = import.meta.env.VITE_API_URL;
 function Sagas() {
   const [sagas, setSagas] = useState([]);
   const [apiResponse, setApiResponse] = useState(null);
@@ -94,8 +93,9 @@ function Sagas() {
                   <article className="saga-card">
                     <div className="saga-image-wrapper">
                       <img
-                        src={saga.image}
-                        alt={saga.name}
+  src={`${API_URL}${saga.image}`}
+  alt={saga.name}
+
                         className="saga-image"
                       />
                     </div>
