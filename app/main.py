@@ -19,6 +19,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "https://dragonball-api-vert.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
